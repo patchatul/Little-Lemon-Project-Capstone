@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { screen } from '@testing-library/react';
+import BookingForm from './pages/BookingForm';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('render submit form button', () => {
+  render(<BookingForm />);
+  const submitButton = screen.getByRole('button');
+  expect(submitButton).toHaveAttribute('disabled');
 });

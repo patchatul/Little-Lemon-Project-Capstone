@@ -35,7 +35,7 @@ function BookingForm(props) {
     return (
         <form onSubmit={handleSubmit} className="booking">
             <fieldset>
-                <h2>Reservation Form</h2>
+                <h1>Reservation Form</h1>
                 <div className="form-area">
                     <div>
                         <label htmlFor="res-name">Enter your name<sup>*</sup>:</label>
@@ -45,12 +45,12 @@ function BookingForm(props) {
                     </div>
                     <div>
                         <label htmlFor="res-email">Enter your email<sup>*</sup>:</label>
-                        <input required id="res-email" type="email" placeholder="LittleLemon@gmail.com"
+                        <input id="res-email" type="email" placeholder="LittleLemon@gmail.com" required
                             value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor="res-date">Choose date<sup>*</sup>:</label>
-                        <input id="res-date" type="date"
+                        <input id="res-date" type="date" required
                             value={date} onChange={(e) => {
                                 setDate(e.target.value)
                                 props.dispatch(e.target.value)
@@ -59,13 +59,16 @@ function BookingForm(props) {
 
                     <div>
                         <label htmlFor="res-time">Choose time<sup>*</sup>:</label>
-                        <select id="res-time"
-                            value={time} onChange={(e) => setTime(e.target.value)} required>
-                            {props.availableTimes.map(availableTime => (
-                                <option value={availableTime.value} key={availableTime.id}>
-                                    {availableTime}
-                                </option>
-                            ))}
+                        <select id="res-time" required
+                            value={time} onChange={(e) => setTime(e.target.value)}>
+                                <option>17.00</option>
+                                <option>17.30</option>
+                                <option>18.00</option>
+                                <option>19.00</option>
+                                <option>21.00</option>
+                                <option>21.30</option>
+                                <option>23.30</option>
+                            {props.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
                         </select>
                     </div>
 

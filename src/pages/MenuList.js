@@ -21,7 +21,7 @@ const MenuList = [
         price: "$5.99",
         image: "https://i.ibb.co/317GqZv/Bruchetta.png",
         description:
-          "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil topped with fresh tomatoes.",
+          "Our Bruschetta is made from grilled bread that has been smeared with garlic, seasoned with salt and olive , and lastly topped with fresh tomatoes.",
       },
     ];
 

@@ -5,7 +5,7 @@ function ConfirmedBookingPage() {
     return (
         <section className="confirmed">
             <div>
-                <h2>Your Reservation at Little Lemon restaurant<br /> has been confirmed!</h2>
+                <h1>Your Reservation at Little Lemon restaurant<br /> has been confirmed!</h1>
                 <img className="confirm-img1" src={lit} alt="Little Lemon restaurant" width="250px" />
                 <div className="confirmed-link">
                     <Link to="/">
